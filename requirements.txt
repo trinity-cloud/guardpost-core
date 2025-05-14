@@ -1,0 +1,51 @@
+# Core web framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.23.2
+python-multipart>=0.0.6  # For form data parsing (often needed with FastAPI)
+
+# AWS SDK
+boto3>=1.28.62
+# boto3-stubs[essential]>=1.28.62 # Optional: Type hints for boto3
+
+# Authentication
+python-jose[cryptography]>=3.3.0  # JWT tokens
+passlib[bcrypt]>=1.7.4  # Password hashing
+
+# Environment variables & Settings
+pydantic>=2.4.2
+pydantic-settings>=2.0.3
+python-dotenv>=1.0.0 # Optional: Usually used locally, not directly by the app
+
+# Database ORM & Migrations
+sqlalchemy>=2.0.0
+alembic>=1.12.0
+psycopg2-binary>=2.9.10 # Recommended driver for PostgreSQL
+# If using SQLite:
+# sqlalchemy>=2.0.0
+# alembic>=1.12.0
+# If using MySQL:
+# sqlalchemy>=2.0.0
+# alembic>=1.12.0
+# mysqlclient
+
+# Utilities
+loguru>=0.7.2  # Better logging
+# tenacity>=8.2.3 # Optional: For retrying operations if needed
+
+# Testing (Optional - Keep if running tests within the backend folder)
+pytest>=7.4.2
+pytest-dotenv
+httpx>=0.25.0  # For testing FastAPI applications
+# moto>=4.2.5  # AWS service mocking for tests 
+
+neo4j>=5.10 # Added for Graph DB
+
+# Background Tasks
+celery[librabbitmq,redis] # Add Celery with RabbitMQ broker & Redis result backend support
+redis # Python client for Redis result backend
+
+# Testing
+pytest-cov
+requests # For API testing
+
+anthropic

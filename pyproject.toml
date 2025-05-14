@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aws_posture_agent_backend"
+version = "0.1.0" # Placeholder version
+# Add other metadata if needed later 
+
+[tool.setuptools]
+# Explicitly tell setuptools to only include the 'app' package
+packages = ["app"] 

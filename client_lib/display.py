@@ -1,0 +1,27 @@
+from .config import NEO4J_BROWSER_URL, NEO4J_PASSWORD
+
+def show_graph_info():
+    """Prints information about accessing the Neo4j graph."""
+    print("\n--- [Client Lib] Exploring the Resource Graph (Manual Examples) ---")
+    print("GuardPost Core builds a Neo4j graph database representing your AWS resources and their relationships.")
+    print("You can explore this graph directly for deeper analysis and visualization.")
+    print(f"\n*   Connect using the Neo4j Browser: {NEO4J_BROWSER_URL}")
+    print(f"*   Username: neo4j")
+    print(f"*   Password: '{NEO4J_PASSWORD}' (from your .env file or client_lib/config.py)")
+    print("\nExample Cypher Queries to try in the Neo4j Browser:")
+    print("  (Replace placeholders like 'i-...' or 'your-user-name' with actual values from your scan)")
+    print("  -----------------------------------------------------------")
+    print("  // Find an EC2 instance and its Security Groups")
+    print("  MATCH (i:Ec2Instance)<-[:APPLIES_TO]-(sg:SecurityGroup)")
+    print("  RETURN i.InstanceId, i.State, sg.GroupId, sg.GroupName")
+    print("  -----------------------------------------------------------")
+    print("  // Find a User and their directly attached policies")
+    print("  MATCH (u:IamUser)-[r:HAS_POLICY]->(p:IamPolicy)")
+    print("  RETURN u.UserName, type(r), p.PolicyName")
+    print("  -----------------------------------------------------------")
+    print("  // Find S3 Buckets that have public ACL grants")
+    print("  MATCH (b:S3Bucket)-[:HAS_ACL_GRANT]->(g:S3ACLGrant)")
+    print("  WHERE g.GranteeURI ENDS WITH 'AllUsers' OR g.GranteeURI ENDS WITH 'AuthenticatedUsers'")
+    print("  RETURN b.Name, g.Permission")
+    print("  -----------------------------------------------------------")
+    print("Note: The GuardPost AI Agent (commercial add-on) provides tools to run these and more complex queries conversationally.") 
