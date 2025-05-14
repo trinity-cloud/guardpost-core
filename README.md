@@ -7,7 +7,7 @@
 # GuardPost Core
 ### *Defend your cloud infrastructure with unprecedented visibility and control*
 
-[![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-blue.svg)](https://github.com/trinity-cloud/guardpost-core/blob/main/LICENSE)
+[![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-blue.svg)](https://github.com/trinity-cloud/guardpost-core/blob/master/LICENSE)
 
 GuardPost Core is the foundation of the GuardPost Cloud Security Platform - an innovative solution that transforms how organizations secure their AWS environments. By combining comprehensive scanning, advanced graph-based analysis, and actionable AI-driven remediation guidance, GuardPost empowers security teams to identify, prioritize, and eliminate cloud security risks before they become breaches.
 
