@@ -3,17 +3,23 @@ Business Source License 1.1
 Parameters
 ----------
 Licensor:          TRINITY CLOUD INC.
-Licensed Work:     "AWS Cloud Posture Agent Core" - Cloud Security Posture Monitoring platform, version 0.1.0
+Licensed Work:     "GuardPost Core" - AWS Cloud Security Posture Monitoring Platform, version 0.1.0 or later. The Licensed Work is (c) 2025 TRINITY CLOUD INC.
 Additional Use Grant:
     You may make production use of the Licensed Work,
-    PROVIDED your use does not include offering the Licensed Work
-    (or any derivative work) as a hosted, managed, or embedded
-    service to any third party. Internal use within your own
-    organization is always permitted. To offer such a service you
-    must obtain a commercial licence from the Licensor.
+    PROVIDED Your use does not include offering the Licensed Work
+    (or any derivative work) to third parties on a hosted, managed,
+    or embedded basis in order to compete with TRINITY CLOUD INC.'s
+    paid version(s) or services relating to the Licensed Work.
+    Internal use within your own organization is always permitted.
+    To offer a service that competes with TRINITY CLOUD INC. or
+    otherwise falls outside this grant, you must obtain a commercial
+    licence from the Licensor.
 
-Change Date:       2028-07-25   (Update with actual release date + 4 years)
+Change Date:       Four years from the date the Licensed Work is published.
 Change License:    Apache License, Version 2.0
+
+For information about alternative licensing arrangements for the Licensed Work,
+please contact hello@trinitycloud.ai
 
 ────────────────────────────────────────────────────────────────────────
                          TEXT OF THE LICENSE
@@ -92,5 +98,3 @@ will eventually be made available under an open-source license, as
 stated in this License.
 
 ────────────────────────────────────────────────────────────────────────
-
-</rewritten_file> 
