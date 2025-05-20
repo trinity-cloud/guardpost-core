@@ -96,7 +96,7 @@ Get GuardPost up and running in minutes:
 
 3.  **Launch GuardPost:**
     ```bash
-    docker-compose up --build -d 
+    docker compose up --build -d 
     ```
 
 *(Note: For detailed instructions on manual setup without Docker, primarily intended for development, please refer to the documentation in the `docs/` directory).* 
@@ -104,9 +104,9 @@ Get GuardPost up and running in minutes:
 ## Using GuardPost
 
 *   Access the API at `http://localhost:8000`
-*   Explore the complete API documentation at `http://localhost:8000/docs`
+*   Explore the complete API documentation at `http://localhost:8000/api/v1/docs` (assuming you are using the default API_V1_STR in the .env file)
 *   Visualize your security graph at `http://localhost:7474` (Neo4j Browser - default credentials `neo4j/your_neo4j_password` or as set in `.env`)
-*   Monitor operations with `docker-compose logs -f app` or `docker-compose logs -f worker`
+*   Monitor operations with `docker compose logs -f app` or `docker compose logs -f worker`
 
 For more detailed information on architecture, workflows, and specific features, please see our **[Documentation](./docs/INDEX.md)**.
 
@@ -114,9 +114,17 @@ For more detailed information on architecture, workflows, and specific features,
 
 A Python client example (`client.py`) demonstrates GuardPost API usage:
 
-1.  Start GuardPost services with `docker-compose up`
+1.  Start GuardPost services with `docker compose up`
 2.  Configure AWS account settings in `client.py`
-3.  Set up AWS credentials in your environment
+3.  Set up AWS credentials in your environment. If modifying the `.env` file, ensure you re-run `docker compose up --build -d`
+4.  Configure python environment. Example (run at root of the repository):
+```
+python3.10 -m venv venv
+source venv/bin/activate
+pip install uv
+uv pip install -r requirements.txt
+```
+
 4.  Run the example to see GuardPost in action:
     ```bash
     python client.py

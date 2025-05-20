@@ -14,7 +14,8 @@ WORKDIR /app
 # Copy only requirements first to leverage Docker cache
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install uv && \
+    uv pip install --system --no-cache-dir -r requirements.txt
 
 # Copy project code
 # Copying app directory, alembic config, etc.
